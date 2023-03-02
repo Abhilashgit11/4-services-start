@@ -44,4 +44,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Injecting services into services.
 
-11. 
+11. Injecting LoggingService into AccountService by creating a constructor
+12. Now we are using the LoggingService to concole.log in AccountService
+
+# Cross component communication
+
+13. "account.component.ts" and "new-account.component.ts"  are two components
+14. We are trying to communicate between these two components.
+15. If anything happens in "account.component.ts", "new-account.component.ts" should get notified
+16. We can achieve this with services by declaring an EventEmitter in the service (For instance: AccountService.) 
+    1.   statusUpdated = new EventEmitter<string>();
+17. Now we can emit an event from "account.component.ts" using the accountService.
+18. Now how to isten to this event in "new-account.component.ts"?
+19. We subscribe to this event in the following way:
+    1. accountService.statusUpdated.subscribe(
+        (status: string) => alert('New Status: ' + status)
+      );
