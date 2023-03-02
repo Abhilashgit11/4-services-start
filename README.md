@@ -1,4 +1,4 @@
-# ServicesStart
+# Services
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+-------------Angular tutorial from Udemy with Maximilian-----------------
+-------------Angular 8 The Complete Guide-----------------
+
+1. Created a new Angular project with command ng new services.
+2. Copied and pasted the "src" folder from Exercise files.
+3. Created an logging service with command "ng g s logging"
+4. Instead of using console.log in "account.component.ts" and "new-account.component.ts" we are using console.log in only logging.service.ts
+5. We are injecting LoggingService in "account.component.ts" and "new-account.component.ts" via a constructor.
+6. This way the app works and there is no code duplication.
+7. Created an "account" service with command ng g s account.
+8. Copied and pasted an array named "accounts[]" and two methods from "app.component.ts" to "account.service.ts".
+9. In "app.component.html" we do not have to catch any events as we are not emitting. So commented out the following code:
+    1.  <!-- <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account> -->
+    2. <!--(statusChanged)="onStatusChanged($event)"></app-account>-->
+10. This way we are not adding account or changing account status via @Output but via a service.
+
+# Injecting services into services.
+
+11. 
