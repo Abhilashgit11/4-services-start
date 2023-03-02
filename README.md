@@ -38,8 +38,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 7. Created an "account" service with command ng g s account.
 8. Copied and pasted an array named "accounts[]" and two methods from "app.component.ts" to "account.service.ts".
 9. In "app.component.html" we do not have to catch any events as we are not emitting. So commented out the following code:
-    1.  <!-- <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account> -->
-    2. <!--(statusChanged)="onStatusChanged($event)"></app-account>-->
+    1.  <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+    2. (statusChanged)="onStatusChanged($event)"></app-account>
 10. This way we are not adding account or changing account status via @Output but via a service.
 
 # Injecting services into services.
